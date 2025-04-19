@@ -12,11 +12,11 @@ service AuthService {
 message RegisterRequest {
     string account = 1;
     string password = 2;
+    string email = 3;
 }
 
 message RegisterResponse {
-    int32 status = 1;
-    repeated string error = 2;
+    repeated string error = 1;
 }
 
 
@@ -27,9 +27,8 @@ message LoginRequest {
 }
 
 message LoginResponse {
-    int32 status = 1;
-    repeated string error = 2;
-    string token = 3;
+    repeated string error = 1;
+    string token = 2;
 }
 
 // ValidateRequest
@@ -38,9 +37,8 @@ message ValidateRequest {
 }
 
 message ValidateResponse {
-    int32 status = 1;
-    repeated string error = 2;
-    string userId = 3;
+    repeated string error = 1;
+    string userId = 2;
 }
 
 
